@@ -10,7 +10,7 @@ console.log("MONGNNGGNG",MONGODB_URI_PROD)
 app.use(bodyParser.json());
 app.use(cors());
 app.use("/api", indexRouter);
-const mongoURI = `mongodb+srv://jcstar55:0505@cluster0.ggqxs.mongodb.net/todo-student`;
+const mongoURI = MONGODB_URI_PROD;
 // const mongoURI = `mongodb://localhost:27017/todo-demo`;
 
 mongoose
