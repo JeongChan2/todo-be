@@ -12,7 +12,7 @@ const taskSchema = Schema(
       required: true,
     },
   },
-  { timestamps: true }
+  { timestamps: true, versionKey: false }
 );
 
 const Task = mongoose.model("Task", taskSchema);

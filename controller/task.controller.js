@@ -17,7 +17,7 @@ taskController.createTask = async (req, res) => {
 // R
 taskController.getTask = async (req, res) => {
   try {
-    const taskList = await Task.find({}).select("-__v");
+    const taskList = await Task.find({});
     res.status(200).json({ status: "ok", data: taskList });
   } catch (err) {
     res.status(400).json({ status: "fail", error: err });
@@ -28,7 +28,7 @@ taskController.getTaskById = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const task = await Task.findById(id).select("-__v");
+    const task = await Task.findById(id);
     res.status(200).json({ status: "ok", data: task });
   } catch (err) {
     res.status(400).json({ status: "fail", error: err });
